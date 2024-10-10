@@ -1,0 +1,12 @@
+.header__nav a {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+  color: black;
+}
+.header__nav .header__nav__about {
+  margin-left: 57px;
+}
+.header__nav .active {
+  border-bottom: 2px solid black;
+}/*# sourceMappingURL=nav.css.map */

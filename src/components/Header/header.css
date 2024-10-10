@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.header .header__img {
+  width: 210.32px;
+  height: 68px;
+}/*# sourceMappingURL=header.css.map */
