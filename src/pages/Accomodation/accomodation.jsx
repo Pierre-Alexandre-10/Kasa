@@ -1,7 +1,12 @@
+import React from "react";
+import Header from "../../components/Header/header";
+
 function Accomodation() {
     return (
         <div>
-            <h1>Accomodation</h1>
+            <div className="header__main">
+                <Header />
+            </div>
         </div>
     );
 }

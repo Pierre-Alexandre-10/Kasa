@@ -7,7 +7,7 @@ import Footer from "../../components/Footer/footer";
 
 function Home() {
     return (
-        <div>
+        <div className="home">
             <div className="header__main">
                 <Header />
                 <main>
