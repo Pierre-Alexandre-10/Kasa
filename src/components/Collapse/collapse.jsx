@@ -1,7 +1,9 @@
 import { useState } from "react";
 
 function Collapse({ title, content }) {
+    // Déclaration de la position du collapse ouvert ou fermer
     const [isOpen, setIsOpen] = useState(false);
+    // Fonction pour inverser l'état ouvert ou fermer
     const toggleCollapse = () => {
         setIsOpen(!isOpen);
     };

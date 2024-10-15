@@ -1,0 +1,33 @@
+$primary-color: #ff6060;
+$secondary-color: black;
+
+.error__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    .error__container__number {
+        font-weight: 700;
+        font-size: 288px;
+        color: $primary-color;
+        margin-top: 50px;
+        margin-bottom: 0;
+    }
+
+    .error__container__txt {
+        margin-top: 80px;
+        font-weight: 500px;
+        font-size: 36px;
+        color: $primary-color;
+    }
+
+    .error__container__link {
+        margin-top: 120px;
+        text-decoration: underline;
+        color: $secondary-color;
+        margin-bottom: 100px;
+    }
+}
