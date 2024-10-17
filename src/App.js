@@ -1,6 +1,6 @@
 import React from "react";
 // import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home/home";
 import Accomodation from "./pages/Accomodation/accomodation";
 import Error from "./pages/Error/error";
@@ -11,7 +11,8 @@ function App() {
         <React.StrictMode>
             <Router>
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/" element={<Navigate replace to="/accueil" />} />
+                    <Route path="/accueil" element={<Home />} />
                     <Route path="/accomodation/:id" element={<Accomodation />} />
                     <Route path="*" element={<Error />} />
                     <Route path="/about" element={<About />} />
