@@ -1,0 +1,13 @@
+.rating__content {
+  display: flex;
+}
+.rating__content .rating__content_star .fullStar {
+  color: #ff6060;
+  width: 36px;
+  height: 36px;
+}
+.rating__content .rating__content_star .emptyStar {
+  color: #e3e3e3;
+  width: 36px;
+  height: 36px;
+}/*# sourceMappingURL=rate.css.map */

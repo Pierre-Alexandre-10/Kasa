@@ -1,0 +1,22 @@
+.tags {
+  margin-top: 20px;
+  margin-bottom: 0;
+  height: 25px;
+}
+.tags__content {
+  display: flex;
+}
+.tags__content h4 {
+  margin: 0 10px 0 0;
+  font-weight: 700;
+  font-size: 14px;
+  width: auto;
+  background-color: #ff6060;
+  color: #fff;
+  text-align: center;
+  height: 25px;
+  padding-top: 8px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 10px;
+}/*# sourceMappingURL=tags.css.map */

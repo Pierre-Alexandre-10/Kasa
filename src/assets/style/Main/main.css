@@ -8,4 +8,9 @@
 @import "../../../components/Footer/footer.css";
 @import "../../../components/Collapse/collapse.css";
 @import "../../../components/Error/error.css";
-@import "../../../components/Carrousel/carrousel.css";/*# sourceMappingURL=main.css.map */
+@import "../../../components/Carrousel/carrousel.css";
+@import "../../../components/Title/title.css";
+@import "../../../components/Tags/tags.css";
+@import "../../../components/Host/host.css";
+@import "../../../components/Fiche_Logement/ficheLogement.css";
+@import "../../../components/Rate/rate.css";/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,21 @@
+.host {
+  margin-top: 24px;
+}
+.host__content {
+  display: flex;
+  justify-content: space-between;
+}
+.host__content p {
+  width: 80px;
+  text-align: end;
+  color: #ff6060;
+  padding-left: 30px;
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 12px;
+}
+.host__content img {
+  border-radius: 100px;
+  width: auto;
+  height: 64px;
+}/*# sourceMappingURL=host.css.map */

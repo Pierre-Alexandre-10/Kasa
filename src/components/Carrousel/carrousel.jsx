@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function AccomodationCarrousel({ accommodationId }) {
+function Carrousel({ accommodationId }) {
     const [items, setItems] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -26,6 +26,7 @@ function AccomodationCarrousel({ accommodationId }) {
     const nextPicture = () => {
         // Passe à l'image suivante
         setCurrentIndex((prevIndex) =>
+            // Vérifie si on se trouve à la derniere image du tableau
             prevIndex === selectedItem.pictures.length - 1 ? 0 : prevIndex + 1
         );
     };
@@ -33,6 +34,7 @@ function AccomodationCarrousel({ accommodationId }) {
     const prevPicture = () => {
         // Revient à l'image précédente
         setCurrentIndex((prevIndex) =>
+            // Vérifie si on se trouve à la premiere image du tableau
             prevIndex === 0 ? selectedItem.pictures.length - 1 : prevIndex - 1
         );
     };
@@ -46,12 +48,16 @@ function AccomodationCarrousel({ accommodationId }) {
                             <img src={selectedItem.pictures[currentIndex]} alt={currentIndex} />
                             <div className="carrousel__items__content__counter">
                                 <p>
-                                    {currentIndex + 1} / {selectedItem.pictures.length}
+                                    {hasPictures && selectedItem.pictures.length > 1 && (
+                                        <span>
+                                            {currentIndex + 1} / {selectedItem.pictures.length}
+                                        </span>
+                                    )}
                                 </p>
                             </div>
                         </div>
                     ) : (
-                        <p>Chargement...</p>
+                        <p></p>
                     )}
                 </div>
             </div>
@@ -70,4 +76,4 @@ function AccomodationCarrousel({ accommodationId }) {
     );
 }
 
-export default AccomodationCarrousel;
+export default Carrousel;

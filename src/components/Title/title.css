@@ -1,0 +1,15 @@
+.title {
+  margin: 0;
+}
+.title__content h2 {
+  font-weight: 500;
+  font-size: 36px;
+  margin-top: 30px;
+  margin-bottom: 0;
+  color: #ff6060;
+}
+.title__content h3 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+}/*# sourceMappingURL=title.css.map */

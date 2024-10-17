@@ -29,7 +29,6 @@ function Gallery() {
     return (
         <div className="gallery">
             <div className="gallery__card">
-                {/* {Accomodation.map((logement) => { */}
                 {accomodationData.map((logement) => {
                     return (
                         <article key={logement.id}>
