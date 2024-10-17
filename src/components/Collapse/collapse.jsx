@@ -20,7 +20,9 @@ function Collapse(props) {
                     )}
                 </span>
             </div>
-            <div className="collapse__dropdown__content">{isOpen && <p>{props.content}</p>}</div>
+            <div className="collapse__dropdown__content">
+                {isOpen && <div className="collapse__dropdown__content__p">{props.content}</div>}
+            </div>
         </div>
     );
 }

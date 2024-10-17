@@ -1,5 +1,19 @@
-.accomodation__info {
+.accomodationPage__info {
   display: flex;
   justify-content: space-between;
   margin: 0;
+}
+.accomodationPage__collapse {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.accomodationPage__collapse__description {
+  width: 47%;
+}
+.accomodationPage__collapse__equipement {
+  width: 47%;
+}
+.accomodationPage__collapse__equipement__content span {
+  display: block;
 }/*# sourceMappingURL=ficheLogement.css.map */

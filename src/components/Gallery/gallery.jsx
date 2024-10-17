@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-// import Accomodation from "../../data/accomodation.json";
 import Card from "../Card/card";
 import { useEffect, useState } from "react";
 
