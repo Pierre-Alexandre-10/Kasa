@@ -16,4 +16,23 @@
   width: 100%;
   height: 255px;
   border-radius: 10px;
+}
+@media all and (min-width: 769px) and (max-width: 1024px) {
+  .gallery .gallery__card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media all and (max-width: 768px) {
+  .gallery .gallery__card {
+    grid-template-columns: repeat(1, 1fr);
+    -moz-column-gap: 0;
+         column-gap: 0;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .gallery {
+    padding: 0;
+    margin-top: 43px;
+  }
 }/*# sourceMappingURL=gallery.css.map */

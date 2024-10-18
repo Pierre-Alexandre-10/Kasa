@@ -9,4 +9,9 @@
 }
 .header__nav .active {
   border-bottom: 2px solid black;
+}
+@media all and (max-width: 768px) {
+  .header__nav a {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=nav.css.map */

@@ -1,33 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-function Carrousel({ accommodationId }) {
-    const [items, setItems] = useState([]);
+function Carrousel({ filter }) {
     const [currentIndex, setCurrentIndex] = useState(0);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch("/data/accomodation.json");
-                if (!response.ok) {
-                    throw new Error("Failed to fetch data");
-                }
-                const data = await response.json();
-                setItems(data);
-            } catch (error) {
-                console.error("Error fetching data:", error);
-            }
-        };
-        fetchData();
-    }, []);
-
-    const selectedItem = items.find((item) => item.id === accommodationId);
-    const hasPictures = selectedItem && selectedItem.pictures && selectedItem.pictures.length > 0;
+    const hasPictures = filter && filter.pictures && filter.pictures.length > 0;
 
     const nextPicture = () => {
         // Passe à l'image suivante
         setCurrentIndex((prevIndex) =>
             // Vérifie si on se trouve à la derniere image du tableau
-            prevIndex === selectedItem.pictures.length - 1 ? 0 : prevIndex + 1
+            prevIndex === filter.pictures.length - 1 ? 0 : prevIndex + 1
         );
     };
 
@@ -35,7 +16,7 @@ function Carrousel({ accommodationId }) {
         // Revient à l'image précédente
         setCurrentIndex((prevIndex) =>
             // Vérifie si on se trouve à la premiere image du tableau
-            prevIndex === 0 ? selectedItem.pictures.length - 1 : prevIndex - 1
+            prevIndex === 0 ? filter.pictures.length - 1 : prevIndex - 1
         );
     };
 
@@ -45,12 +26,12 @@ function Carrousel({ accommodationId }) {
                 <div className="carrousel__items">
                     {hasPictures ? (
                         <div className="carrousel__items__content">
-                            <img src={selectedItem.pictures[currentIndex]} alt={currentIndex} />
+                            <img src={filter.pictures[currentIndex]} alt={currentIndex} />
                             <div className="carrousel__items__content__counter">
                                 <p>
-                                    {hasPictures && selectedItem.pictures.length > 1 && (
+                                    {hasPictures && filter.pictures.length > 1 && (
                                         <span>
-                                            {currentIndex + 1} / {selectedItem.pictures.length}
+                                            {currentIndex + 1} / {filter.pictures.length}
                                         </span>
                                     )}
                                 </p>
@@ -62,7 +43,7 @@ function Carrousel({ accommodationId }) {
                 </div>
             </div>
 
-            {hasPictures && selectedItem.pictures.length > 1 && (
+            {hasPictures && filter.pictures.length > 1 && (
                 <div className="button">
                     <div className="button__left">
                         <i onClick={prevPicture} className="fa-solid fa-chevron-left"></i>

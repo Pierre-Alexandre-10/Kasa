@@ -12,6 +12,8 @@ function FicheLogement() {
 
     const [items, setItem] = useState([]);
 
+    const notes = [1, 2, 3, 4, 5];
+
     // Récupère les données json via fetch après création composant
     useEffect(() => {
         const fetchData = async () => {
@@ -32,28 +34,28 @@ function FicheLogement() {
     }, []);
 
     const filteredItem = items.find((item) => item.id === id);
+    // console.log(filteredItem);
 
-    return (
+    return filteredItem ? (
         <div className="accomodationPage">
-            <Carrousel accommodationId={id} />
+            <Carrousel filter={filteredItem} />
             <div className="accomodationPage__info">
                 <div>
-                    <Title titleId={id} />
-                    <Tags tagsId={id} />
+                    <Title title={filteredItem.title} location={filteredItem.location} />
+                    <Tags filter={filteredItem} />
                 </div>
                 <div className="accomodationPage__info__right">
-                    <Host hostId={id} />
-                    <Rate rateId={id} />
+                    <Host filter={filteredItem} />
+                    <Rate filter={filteredItem} notes={notes} />
                 </div>
             </div>
             <div className="accomodationPage__collapse">
                 <div className="accomodationPage__collapse__description">
                     <Collapse
-                        contentId={id}
                         title="Description"
                         content={
                             filteredItem ? (
-                                <div>
+                                <div className="accomodationPage__collapse__description__content">
                                     <span>{filteredItem.description}</span>
                                 </div>
                             ) : (
@@ -64,7 +66,6 @@ function FicheLogement() {
                 </div>
                 <div className="accomodationPage__collapse__equipement">
                     <Collapse
-                        contentId={id}
                         title="Équipement"
                         content={
                             filteredItem ? (
@@ -81,6 +82,8 @@ function FicheLogement() {
                 </div>
             </div>
         </div>
+    ) : (
+        <p>Chargement...</p>
     );
 }
 

@@ -8,4 +8,11 @@
         width: 210.32px;
         height: 68px;
     }
+
+    @media all and (max-width: 768px) {
+        .header__img {
+            width: 145px;
+            height: 47px;
+        }
+    }
 }

@@ -31,4 +31,18 @@
         margin: 0;
         padding: 0;
     }
+    @media all and (max-width: 768px) {
+        .banner__txt {
+            font-size: 24px;
+            left: 50%;
+            width: 90%;
+            text-align: start;
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .banner {
+        height: 140px;
+    }
 }
