@@ -10,7 +10,7 @@ function Gallery() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch("/data/accomodation.json");
+                const response = await fetch(`${process.env.PUBLIC_URL}/data/accomodation.json`);
                 if (!response.ok) {
                     throw new Error("Failed to fetch data");
                 }
