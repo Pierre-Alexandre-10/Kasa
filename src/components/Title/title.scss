@@ -16,5 +16,15 @@ $primary-color: #ff6060;
             font-weight: 500;
             font-size: 18px;
         }
+
+        @media all and (max-width: 768px) {
+            & h2 {
+                font-size: 18px;
+            }
+
+            & h3 {
+                font-size: 14px;
+            }
+        }
     }
 }

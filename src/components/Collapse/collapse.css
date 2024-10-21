@@ -1,8 +1,13 @@
 .collapse {
-  margin-top: 38px;
   width: 80%;
+  margin: 38px auto 0;
 }
 
+@media all and (max-width: 768px) {
+  .collapse {
+    width: 100%;
+  }
+}
 .collapse__dropdown__container {
   margin-bottom: 30px;
   color: #fff;
@@ -24,6 +29,17 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+@media all and (max-width: 768px) {
+  .collapse__dropdown__container .collapse__dropdown__up h2 {
+    font-size: 15px;
+    padding-top: 5px;
+  }
+}
+@media all and (max-width: 768px) {
+  .collapse__dropdown__container .collapse__dropdown__up {
+    height: 30px;
+  }
 }
 .collapse__dropdown__container .collapse__dropdown__content {
   background-color: rgba(246, 246, 246, 0.4509803922);

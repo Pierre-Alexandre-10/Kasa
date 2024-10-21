@@ -14,4 +14,7 @@
   .header__nav a {
     font-size: 12px;
   }
+  .header__nav .header__nav__about {
+    margin-left: 26px;
+  }
 }/*# sourceMappingURL=nav.css.map */

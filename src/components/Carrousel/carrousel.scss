@@ -37,7 +37,6 @@
 
             p {
                 margin-top: 10px;
-                font-size: 1.2rem;
                 color: #fff;
                 font-weight: 500;
                 font-size: 18px;
@@ -59,6 +58,12 @@
             margin: 24px;
             font-size: 80px;
             cursor: pointer;
+        }
+
+        @media all and (max-width: 768px) {
+            & i {
+                font-size: 24px;
+            }
         }
     }
 

@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Carrousel from "../Carrousel/carrousel";
 import Title from "../Title/title";
 import Tags from "../Tags/tags";
@@ -8,10 +8,16 @@ import Collapse from "../Collapse/collapse";
 import { useEffect, useState } from "react";
 
 function FicheLogement() {
+    // Récupérer l'id dans l'url
     const { id } = useParams();
 
+    // Stocker le données récupérés
     const [items, setItem] = useState([]);
 
+    // Suivre l'état de chargement des données pour la page erreur
+    const [loading, setLoading] = useState(true);
+
+    // Tableau de valeur comparative pour la notation
     const notes = [1, 2, 3, 4, 5];
 
     // Récupère les données json via fetch après création composant
@@ -27,6 +33,8 @@ function FicheLogement() {
                 setItem(data);
             } catch (error) {
                 console.error("Error fetching data:", error);
+            } finally {
+                setLoading(false);
             }
         };
 
@@ -34,7 +42,14 @@ function FicheLogement() {
     }, []);
 
     const filteredItem = items.find((item) => item.id === id);
-    // console.log(filteredItem);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        // Si le chargement est terminé est que aucun élément ne correspond à l'ID
+        if (!loading && !filteredItem) {
+            navigate("*");
+        }
+    }, [loading, filteredItem, navigate]); // Assure que l'effet se déclenche correctement lorsque ces valeurs changent
 
     return filteredItem ? (
         <div className="accomodationPage">

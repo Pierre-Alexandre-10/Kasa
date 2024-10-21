@@ -1,7 +1,12 @@
 .collapse {
-    margin-top: 38px;
     width: 80%;
-    // margin: 38px auto 0;
+    margin: 38px auto 0;
+}
+
+@media all and (max-width: 768px) {
+    .collapse {
+        width: 100%;
+    }
 }
 
 .collapse__dropdown__container {
@@ -26,6 +31,19 @@
             display: flex;
             align-items: center;
             cursor: pointer;
+        }
+
+        @media all and (max-width: 768px) {
+            & h2 {
+                font-size: 15px;
+                padding-top: 5px;
+            }
+        }
+    }
+
+    @media all and (max-width: 768px) {
+        .collapse__dropdown__up {
+            height: 30px;
         }
     }
 

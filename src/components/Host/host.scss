@@ -8,7 +8,6 @@
         & p {
             width: 80px;
             text-align: end;
-            // align-items: center;
             color: #ff6060;
             padding-left: 30px;
             font-weight: 500;
@@ -21,5 +20,29 @@
             width: auto;
             height: 64px;
         }
+
+        @media all and (max-width: 768px) {
+            & img {
+                margin-left: 10px;
+                margin-top: 11px;
+                height: 32px;
+            }
+
+            & p {
+                font-size: 12px;
+            }
+        }
+    }
+
+    @media all and (max-width: 768px) {
+        &__content {
+            justify-content: end;
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .host {
+        margin-top: 0px;
     }
 }

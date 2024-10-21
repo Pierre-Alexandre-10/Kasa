@@ -3,6 +3,13 @@
   justify-content: space-between;
   margin: 0;
 }
+@media all and (max-width: 768px) {
+  .accomodationPage__info__right {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
 .accomodationPage__collapse {
   display: flex;
   justify-content: space-between;
@@ -16,4 +23,19 @@
 }
 .accomodationPage__collapse__equipement__content span {
   display: block;
+}
+@media all and (max-width: 768px) {
+  .accomodationPage__info {
+    display: block;
+  }
+  .accomodationPage__collapse {
+    display: block;
+    margin-top: 15px;
+  }
+  .accomodationPage__collapse__description {
+    width: 100%;
+  }
+  .accomodationPage__collapse__equipement {
+    width: 100%;
+  }
 }/*# sourceMappingURL=ficheLogement.css.map */

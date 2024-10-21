@@ -30,4 +30,20 @@ $secondary-color: black;
         color: $secondary-color;
         margin-bottom: 100px;
     }
+
+    @media all and (max-width: 768px) {
+        .error__container__number {
+            font-size: 96px;
+            margin-top: 113px;
+        }
+
+        .error__container__txt {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .error__container__link {
+            font-size: 14px;
+        }
+    }
 }

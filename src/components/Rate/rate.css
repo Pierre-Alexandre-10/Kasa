@@ -1,13 +1,28 @@
-.rating__content {
+@media all and (max-width: 768px) {
+  .rating {
+    padding-top: 20px;
+  }
+}
+.rating .rating__content {
   display: flex;
 }
-.rating__content .rating__content_star .fullStar {
+.rating .rating__content .rating__content_star .fullStar {
   color: #ff6060;
   width: 36px;
   height: 36px;
 }
-.rating__content .rating__content_star .emptyStar {
+.rating .rating__content .rating__content_star .emptyStar {
   color: #e3e3e3;
   width: 36px;
   height: 36px;
+}
+@media all and (max-width: 768px) {
+  .rating .rating__content .rating__content_star .fullStar {
+    width: 18px;
+    height: 18px;
+  }
+  .rating .rating__content .rating__content_star .emptyStar {
+    width: 18px;
+    height: 18px;
+  }
 }/*# sourceMappingURL=rate.css.map */
