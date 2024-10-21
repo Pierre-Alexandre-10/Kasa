@@ -4,7 +4,7 @@ function Nav() {
     return (
         <nav className="header__nav">
             <NavLink
-                to="/"
+                to="/accueil"
                 className={({ isActive }) =>
                     isActive ? "header__nav__home active" : "header__nav__home"
                 }

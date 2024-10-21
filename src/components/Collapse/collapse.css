@@ -45,8 +45,14 @@
   background-color: rgba(246, 246, 246, 0.4509803922);
   color: black;
   border-radius: 5px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
 }
 .collapse__dropdown__container .collapse__dropdown__content__p {
   margin: 0;
   padding: 15px;
+}
+.collapse__dropdown__container.open .collapse__dropdown__content {
+  max-height: 500px;
 }/*# sourceMappingURL=collapse.css.map */

@@ -9,19 +9,20 @@ function Collapse({ title, content }) {
     };
 
     return (
-        <div className="collapse__dropdown__container">
+        <div className={`collapse__dropdown__container ${isOpen ? "open" : ""}`}>
+            {/* <div className="collapse__dropdown__container"> */}
             <div className="collapse__dropdown__up">
                 <h2>{title}</h2>
                 <span onClick={toggleCollapse}>
                     {isOpen ? (
-                        <i className="fa-solid fa-chevron-up"></i>
-                    ) : (
                         <i className="fa-solid fa-chevron-down"></i>
+                    ) : (
+                        <i className="fa-solid fa-chevron-up"></i>
                     )}
                 </span>
             </div>
             <div className="collapse__dropdown__content">
-                {isOpen && <div className="collapse__dropdown__content__p">{content}</div>}
+                <div className="collapse__dropdown__content__p">{content}</div>
             </div>
         </div>
     );
