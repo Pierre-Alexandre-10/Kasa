@@ -30,19 +30,25 @@ function About() {
     return (
         <div className="about">
             <div className="header__main">
-                <Header />
-                <Banner image={Image} alt="Image de bannière" />
-                <div className="collapse">
-                    <div className="collapse__down">
-                        {collapseData.map((data) => (
-                            <div key={data.id}>
-                                <Collapse content={data.content} title={data.title} />
-                            </div>
-                        ))}
+                <header>
+                    <Header />
+                </header>
+                <main>
+                    <Banner image={Image} alt="Image de bannière" />
+                    <div className="collapse">
+                        <div className="collapse__down">
+                            {collapseData.map((data) => (
+                                <div key={data.id}>
+                                    <Collapse content={data.content} title={data.title} />
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                </div>
+                </main>
             </div>
-            <Footer />
+            <footer>
+                <Footer />
+            </footer>
         </div>
     );
 }

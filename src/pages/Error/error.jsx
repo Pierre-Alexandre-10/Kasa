@@ -6,12 +6,16 @@ function Error() {
     return (
         <div className="error">
             <div className="header__main">
-                <Header />
+                <header>
+                    <Header />
+                </header>
                 <main>
                     <ErrorPage />
                 </main>
             </div>
-            <Footer />
+            <footer>
+                <Footer />
+            </footer>
         </div>
     );
 }

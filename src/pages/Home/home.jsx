@@ -9,7 +9,9 @@ function Home() {
     return (
         <div className="home">
             <div className="header__main">
-                <Header />
+                <header>
+                    <Header />
+                </header>
                 <main>
                     <Banner
                         image={Image}
@@ -19,7 +21,9 @@ function Home() {
                     <Gallery />
                 </main>
             </div>
-            <Footer />
+            <footer>
+                <Footer />
+            </footer>
         </div>
     );
 }

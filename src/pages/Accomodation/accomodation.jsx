@@ -7,12 +7,16 @@ function Accomodation() {
     return (
         <div>
             <div className="header__main">
-                <Header />
+                <header>
+                    <Header />
+                </header>
                 <main>
                     <FicheLogement />
                 </main>
             </div>
-            <Footer />
+            <footer>
+                <Footer />
+            </footer>
         </div>
     );
 }
